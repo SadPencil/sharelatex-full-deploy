@@ -2,9 +2,8 @@ version: '2.2'
 services:
     sharelatex:
         restart: always
-        # Server Pro users:
-        # image: quay.io/sharelatex/sharelatex-pro
-        image: sharelatex/sharelatex
+        # image: sharelatex/sharelatex
+        build: './sharelatex/'
         container_name: sharelatex
         depends_on:
             mongo:
@@ -18,11 +17,6 @@ services:
             - redis
         volumes:
             - ~/sharelatex_data:/var/lib/sharelatex
-            ########################################################################
-            ####  Server Pro: Uncomment the following line to mount the docker  ####
-            ####             socket, required for Sibling Containers to work    ####
-            ########################################################################
-            # - /var/run/docker.sock:/var/run/docker.sock
         environment:
 
             SHARELATEX_APP_NAME: Overleaf Community Edition
