@@ -5,7 +5,7 @@ This is the so-called "legacy" way as I'm a podman user rather than docker.
 
 - Edit the settings in `docker-compose.yml` file, especially the `SHARELATEX_SITE_URL`. 
 
-- If the server is located in Mainland China, modify [sharelatex/Dockerfile] to specify a CTAN mirror. A tuna mirror has been provided as a comment.  
+- If the server is located in Mainland China, modify [Dockerfile](/sharelatex/Dockerfile) to specify a CTAN mirror. A tuna mirror has been provided as a comment.  
 
 - Start the containers.
   ```bash
